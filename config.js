@@ -1,4 +1,4 @@
-// Modul dan dependensi yang diperlukan
+// Module and dependencies required
 const pkg = require("./package.json");
 const {
     monospace,
@@ -6,62 +6,62 @@ const {
     quote
 } = require("@mengkodingan/ckptw");
 
-// Konfigurasi
+// Configuration
 global.config = {
-    // Informasi bot dasar
+    // Basic bot information
     bot: {
-        name: "CKPTW", // Nama bot
-        prefix: /^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i, // Karakter awalan perintah yang diizinkan
-        phoneNumber: "", // Nomor telepon bot (opsional jika menggunakan QR code)
-        thumbnail: "https://e1.pxfuel.com/desktop-wallpaper/943/672/desktop-wallpaper-whatsapp-bot-what-is-it-and-how-to-use-messenger-chatbots-chatbot.png", // Gambar thumbnail bot
-        website: "https://chat.whatsapp.com/FlqTGm4chSjKMsijcqAIJs" // Website untuk WhatsApp bot
+        name: "H4K3R TOOLS", // Bot name
+        prefix: /^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i, // Allowed command prefix characters
+        phoneNumber: "447822011297", // Bot's phone number (optional if using QR code)
+        thumbnail: "https://c.top4top.io/p_3261rguno1.jpg", // Bot thumbnail image
+        website: "https://chat.whatsapp.com/FaqPYCEsxE95vr4SP78HeD" // WhatsApp bot website
     },
 
-    // Pesan bot yang disesuaikan untuk situasi tertentu
+    // Customized bot messages for specific situations
     msg: {
-        admin: quote("⛔ Perintah hanya dapat diakses oleh admin grup!"), // Pesan ketika perintah hanya untuk admin
-        banned: quote("⛔ Tidak dapat memproses karena Anda telah dibanned!"), // Pesan untuk pengguna yang dibanned
-        botAdmin: quote("⛔ Bot bukan admin, tidak bisa menggunakan perintah!"), // Pesan jika bot bukan admin di grup
-        cooldown: quote("🔄 Perintah ini sedang dalam cooldown, tunggu..."), // Pesan saat cooldown perintah
-        coin: quote("⛔ Anda tidak punya cukup koin!"), // Pesan ketika koin tidak cukup
-        group: quote("⛔ Perintah hanya dapat diakses dalam grup!"), // Pesan untuk perintah grup
-        owner: quote("⛔ Perintah hanya dapat diakses Owner!"), // Pesan untuk perintah yang hanya owner bisa akses
-        premium: quote("⛔ Anda bukan pengguna Premium!"), // Pesan jika pengguna bukan Premium
-        private: quote("⛔ Perintah hanya dapat diakses dalam obrolan pribadi!"), // Pesan untuk perintah obrolan pribadi
-        restrict: quote("⛔ Perintah ini telah dibatasi karena alasan keamanan!"), // Pesan pembatasan perintah
+        admin: quote("⛔ This command can only be accessed by group admins!"), // Message for admin-only commands
+        banned: quote("⛔ Cannot process because you are banned!"), // Message for banned users
+        botAdmin: quote("⛔ Bot is not an admin, cannot use this command!"), // Message if the bot is not a group admin
+        cooldown: quote("🔄 This command is on cooldown, please wait..."), // Message during command cooldown
+        coin: quote("⛔ You don't have enough coins!"), // Message for insufficient coins
+        group: quote("⛔ This command can only be accessed in groups!"), // Message for group-only commands
+        owner: quote("⛔ This command can only be accessed by the owner!"), // Message for owner-only commands
+        premium: quote("⛔ You are not a Premium user!"), // Message for non-Premium users
+        private: quote("⛔ This command can only be accessed in private chats!"), // Message for private chat-only commands
+        restrict: quote("⛔ This command has been restricted for security reasons!"), // Restricted command message
 
-        watermark: `@${pkg.name} / v${pkg.version}`, // Watermark nama dan versi pada bot
-        footer: italic("Developed by ItsReimau"), // Footer di pesan bot
-        readmore: "\u200E".repeat(4001), // String read more
+        watermark: `@${pkg.name} / v${pkg.version}`, // Bot name and version watermark
+        footer: italic("Developed by H4K3R"), // Bot message footer
+        readmore: "\u200E".repeat(4001), // Read more string
 
-        wait: quote("🔄 Tunggu sebentar..."), // Pesan loading
-        notFound: quote("❎ Tidak ada yang ditemukan! Coba lagi nanti."), // Pesan item tidak ditemukan
-        urlInvalid: quote("❎ URL tidak valid!") // Pesan jika URL tidak valid
+        wait: quote("🔄 Please wait..."), // Loading message
+        notFound: quote("❎ Nothing found! Try again later."), // Item not found message
+        urlInvalid: quote("❎ Invalid URL!") // Invalid URL message
     },
 
-    // Informasi owner bot
+    // Bot owner information
     owner: {
-        name: "", // Nama owner bot
-        number: "", // Nomor telepon owner bot
-        organization: "", // Nama organisasi owner bot
-        co: [""] // Nomor co-owner bot
+        name: "H4K3R", // Bot owner's name
+        number: "447822011297", // Bot owner's phone number
+        organization: "", // Bot owner's organization name
+        co: [""] // Co-owner phone numbers
     },
 
-    // Konfigurasi stiker bot
+    // Bot sticker configuration
     sticker: {
-        packname: "Stiker ini dibuat oleh", // Nama paket stiker
-        author: "@ckptw-wabot" // Pembuat stiker
+        packname: "Sticker created by", // Sticker package name
+        author: "@ckptw-wabot" // Sticker creator
     },
 
-    // Pengaturan sistem bot
+    // Bot system settings
     system: {
-        autoRead: true, // Apakah bot otomatis membaca pesan masuk
-        autoTypingOnCmd: true, // Aktifkan status mengetik ketika memproses perintah
-        cooldown: 5000, // Waktu cooldown antar perintah dalam milidetik
-        restrict: false, // Membatasi perintah tertentu untuk keamanan
-        selfOwner: true, // Apakah bot menjadi owner
-        selfReply: true, // Apakah bot merespon pesan yang dikirim bot sendiri
-        timeZone: "Asia/Jakarta", // Zona waktu bot
-        usePairingCode: false // Menggunakan kode pairing untuk koneksi
+        autoRead: true, // Whether the bot automatically reads incoming messages
+        autoTypingOnCmd: true, // Enable typing status when processing commands
+        cooldown: 5000, // Command cooldown time in milliseconds
+        restrict: false, // Restrict certain commands for security
+        selfOwner: true, // Whether the bot acts as the owner
+        selfReply: true, // Whether the bot replies to messages it sends itself
+        timeZone: "Asia/Jakarta", // Bot's time zone
+        usePairingCode: false // Use pairing code for connection
     }
 };
